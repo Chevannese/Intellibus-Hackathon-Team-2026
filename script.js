@@ -33,13 +33,16 @@ show("upload")
 function confirmImage(){
 
 const file = document.getElementById("fileInput").files[0]
+const preview = document.getElementById("previewImage")
 
-if(!file){
-document.getElementById("error").innerText="Please upload an image."
+if(!file && !preview.src){
+document.getElementById("error").innerText="Please upload or capture an image."
 return
 }
 
-document.getElementById("previewImage").src = URL.createObjectURL(file)
+if(file){
+preview.src = URL.createObjectURL(file)
+}
 
 show("loading")
 
@@ -94,5 +97,50 @@ return a[type] - b[type]
 })
 
 displayCompanies()
+
+}
+
+let stream
+
+function startCamera(){
+
+const video = document.getElementById("camera")
+const captureBtn = document.getElementById("captureBtn")
+
+navigator.mediaDevices.getUserMedia({video:true})
+.then(s => {
+
+stream = s
+video.srcObject = stream
+
+video.style.display = "block"
+captureBtn.style.display = "inline-block"
+
+})
+.catch(err=>{
+alert("Camera access denied")
+})
+
+}
+
+function captureImage(){
+
+const video = document.getElementById("camera")
+const canvas = document.getElementById("canvas")
+const context = canvas.getContext("2d")
+
+canvas.width = video.videoWidth
+canvas.height = video.videoHeight
+
+context.drawImage(video,0,0)
+
+const imageData = canvas.toDataURL("image/png")
+
+document.getElementById("previewImage").src = imageData
+
+// stop camera
+stream.getTracks().forEach(track=>track.stop())
+
+video.style.display="none"
 
 }

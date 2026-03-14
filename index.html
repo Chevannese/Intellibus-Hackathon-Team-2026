@@ -25,9 +25,22 @@ src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap">
 
 <!-- UPLOAD PAGE -->
 <section id="upload">
+
 <h2>Upload Your Recyclable Item</h2>
 
+<div class="buttons">
 <input type="file" id="fileInput" accept="image/*">
+
+<button onclick="startCamera()">Camera</button>
+</div>
+
+<video id="camera" autoplay style="display:none;"></video>
+
+<button id="captureBtn" onclick="captureImage()" style="display:none;">
+Capture
+</button>
+
+<canvas id="canvas" style="display:none;"></canvas>
 
 <div class="buttons">
 <button onclick="confirmImage()">Confirm</button>
