@@ -22,6 +22,10 @@ text-align:center;
 display:block;
 }
 
+.hidden{
+display:none;
+}
+
 .hero-img{
 width:250px;
 margin:30px;
@@ -88,4 +92,27 @@ margin:auto;
 @keyframes spin{
 0%{transform:rotate(0deg);}
 100%{transform:rotate(360deg);}
+}
+
+nav{
+margin-top:10px;
+}
+
+nav button{
+
+background:white;
+color:#0d6efd;
+border:2px solid #0d6efd;
+padding:8px 15px;
+margin:5px;
+cursor:pointer;
+border-radius:5px;
+
+}
+
+nav button:hover{
+
+background:#0d6efd;
+color:white;
+
 }

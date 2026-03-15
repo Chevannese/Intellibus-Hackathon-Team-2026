@@ -144,3 +144,14 @@ stream.getTracks().forEach(track=>track.stop())
 video.style.display="none"
 
 }
+
+function showPage(page){
+
+document.querySelectorAll("section").forEach(section=>{
+section.classList.add("hidden")
+})
+
+document.getElementById(page).classList.remove("hidden")
+
+}
+

@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.top-bar {
+    background: #0c8a2f;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+.top-bar a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0c8a2f;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn-nav {
+    background: #0c8a2f;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: url('recycle-bg.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 85%;
+}
+
+.btn-primary {
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.phone-link {
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.hero-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    color: black;
+    width: 320px;
+}
+
+.hero-form h3 {
+    color: #0c8a2f;
+    margin-bottom: 20px;
+}
+
+.hero-form input,
+.hero-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btn-submit {
+    background: #000;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.rating {
+    text-align: center;
+    margin-top: 12px;
+    color: #ffa500;
+    font-size: 20px;
+}
